@@ -103,7 +103,7 @@ export default function Header() {
                 opacity: 0,
               },
               {
-                duration: 300,
+                duration: 200,
                 easing: "ease-in-out",
                 fill: "forwards",
               },

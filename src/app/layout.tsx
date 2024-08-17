@@ -35,7 +35,7 @@ export default function RootLayout({
             " mih-h-screen max-w-screen overflow-x-hidden flex flex-col font-light"
           }
         >
-          <div className="z-20 flex-none">
+          <div className="z-5 flex-none">
             <Header />
           </div>
           <GlobalWrapper>{children}</GlobalWrapper>

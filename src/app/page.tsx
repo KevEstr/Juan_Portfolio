@@ -75,10 +75,12 @@ export default async function Home() {
       description: "No hice nada en un proyecto grande de un hotel, entonces me cargaron y entregamos algo bonito.",
       websiteUrl: "https://example.com/project-1",
       githubUrl: "https://github.com/usuario/project-1",
-      dateRange: { start: "2023-01-01", end: "2023-06-01" },
+      dateRange: { start: "2023-06-01", end: "2023-10-01" },
       tags: [
-        { name: "JavaScript", icon: "/icons/postgres.png", slug: "frontend", categories: [{ title: "Frontend", slug: "frontend" }] },
         { name: "React", icon: "/icons/react.png", slug: "frontend", categories: [{ title: "Frontend", slug: "frontend" }] },
+        { name: "Express", icon: "/icons/express-js.svg", slug: "backend", categories: [{ title: "Backend", slug: "backend" }] },
+        { name: "PostgreSQL", icon: "/icons/postgres.png", slug: "backend", categories: [{ title: "Backend", slug: "backend" }] },
+        { name: "JavaScript", icon: "/icons/javascript.png", slug: "frontend", categories: [{ title: "Frontend", slug: "frontend" }] }
       ],
       content: [
         "<p>No hice nada en un proyecto grande de un hotel, entonces me cargaron y entregamos algo bonito</p>"
@@ -93,8 +95,8 @@ export default async function Home() {
       githubUrl: "https://github.com/usuario/project-2",
       dateRange: { start: "2023-11-01", end: "2023-09-10" },
       tags: [
-        { name: "Python", icon: "/icons/python.svg", slug: "backend", categories: [{ title: "Backend", slug: "backend" }] },
         { name: "React", icon: "/icons/react.png", slug: "frontend", categories: [{ title: "Frontend", slug: "frontend" }] },
+        { name: "JavaScript", icon: "/icons/javascript.png", slug: "frontend", categories: [{ title: "Frontend", slug: "frontend" }] },
       ],
       content: [
         "<p>No hice nada en un proyecto grande de un hotel, entonces me cargaron y entregamos algo bonito</p>"
@@ -117,7 +119,7 @@ export default async function Home() {
       organization: "Clases",
       title: "Profesor de Python",
       dateRange: { start: "2023", end: "2023" },
-      description: "Enseñé a estudiantes",
+      description: "Enseñé a estudiantes usando ChatGPT",
       content: "<p>puro GPT</p>", // Un solo string en lugar de un array
       slug: "experience-2"
     },
@@ -157,6 +159,8 @@ export default async function Home() {
         <AboutMe />
       </SectionContainer>
 
+      
+
       {/* tech section */}
       <SectionContainer>
         <SectionHeader>Technologies</SectionHeader>
@@ -166,14 +170,11 @@ export default async function Home() {
       </SectionContainer>
 
       <SectionContainer className="z-10">
-        <SectionHeader>Feature Projects</SectionHeader>
+        <SectionHeader>My Projects</SectionHeader>
         <ProjectCardList
           projects={projects}
           className="grid-cols-1 lg:grid-cols-2 sm:max-w-[600px] md:max-w-[700px] lg:max-w-none"
         />
-        <Link href="/projects" className="mt-6 cursor-pointer md:mt-10">
-          View all projects
-        </Link>
       </SectionContainer>
 
       {/* experience section */}
@@ -182,12 +183,7 @@ export default async function Home() {
         <ExperienceList experiences={experiences} />
       </SectionContainer>
 
-      {/* quote */}
-      {data.qoute && (
-        <SectionContainer>
-          <Qoute qoute={data.qoute} />
-        </SectionContainer>
-      )}
+   
     </DefaultLayout>
   );
 }

@@ -20,3 +20,4 @@ export function SectionHeader({ children }: { children: React.ReactNode }) {
     </motion.h2>
   );
 }
+

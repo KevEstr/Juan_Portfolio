@@ -176,10 +176,7 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-      <Link
-        href={`/projects/${project.slug}`}
-        className="absolute inset-0 z-0 block opacity-0"
-      ></Link>
+      
     </div>
   );
 }

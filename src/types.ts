@@ -16,9 +16,8 @@ interface Category {
 }
 
 interface Tag {
-  slug: string;
   name: string;
-  iconFileName?: string;
+  icon: string;
   iconScale?: number;
   categories: Category[];
 }
