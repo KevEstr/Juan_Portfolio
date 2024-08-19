@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
       </div>
       <Col className="gap-4 sm:gap-6">
         {projects.map((project) => (
-          <Card.Container key={project.slug} href={`/projects/${project.slug}`}>
+          <Card.Container key={project.slug} href={`/projects`}>
             <Card.Content>
               <div className="flex justify-between">
                 <Card.Title>{project.title}</Card.Title>
